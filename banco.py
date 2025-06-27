@@ -2,8 +2,8 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-from flask import send_from_directory
-app = Flask(__name__)
+from flask import Flask, jsonify, render_template
+app = Flask(__name__, template_folder="templates", static_folder="static")
 CORS(app)
 
 SERVICE_ACCOUNT_FILE = 'credentials.json'
@@ -88,7 +88,9 @@ def get_dobras():
 @app.route('/static/<path:filename>')
 def static_files(filename):
     return send_from_directory('static', filename)
-
+@app.route("/")
+def index():
+    return render_template("form.html")
 # ⚠️ Esse bloco DEVE vir por último
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
