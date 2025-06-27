@@ -4,13 +4,13 @@ window._dadosDobras = [];
 window._configuracoes = {};
 
 async function carregarMateriaisEConfigs() {
-  const resMateriais = await fetch("http://localhost:5000/materiais");
+  const resMateriais = await fetch("/materiais");
   window._dadosMateriais = await resMateriais.json();
 
-  const resDobras = await fetch("http://localhost:5000/dobras");
+  const resDobras = await fetch("/dobras");
   window._dadosDobras = await resDobras.json();
 
-  const resConfig = await fetch("http://localhost:5000/configuracoes");
+  const resConfig = await fetch("/configuracoes");
   window._configuracoes = await resConfig.json();
 }
 
