@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Orçamento Corte a Laser</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
   <link rel="icon" type="image/png" sizes="16x16"  href="https://tmmaquinas.com.br/wp-content/uploads/2025/06/favicon2.png">
@@ -84,8 +84,7 @@
 </script>
 
   <!-- Seu script de cálculo (adicionarPeca, calcularValoresDaPeca, etc.) -->
-  <script src="calculo.js"></script>
-
+  <script src="{{ url_for('static', filename='js/calculo.js') }}"></script>
   <!-- html2pdf.js (deve vir depois do calculo.js) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
