@@ -905,7 +905,7 @@ function baixarPdfViaWebhookForm() {
   // 3) Cria um form temporário
   const form = document.createElement('form');
   form.method = 'POST';
-  form.action = 'https://automacao-n8n.llvxyq.easypanel.host/webhook-test/enviar-pdf';
+  form.action = 'https://automacao-n8n.llvxyq.easypanel.host/webhook/enviar-pdf';
   form.target = '_blank';           // abre resultado em nova aba
   form.style.display = 'none';
 
