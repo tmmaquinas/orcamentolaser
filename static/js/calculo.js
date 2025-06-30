@@ -996,7 +996,7 @@ function enviarDadosParaPlanilhaComoFormData() {
   const formData = new FormData();
   formData.append('payload', jsonString);
 
-  fetch('https://automacao-n8n.llvxyq.easypanel.host/webhook-test/dados-planilha2', {
+  fetch('https://automacao-n8n.llvxyq.easypanel.host/webhook/dados-planilha2', {
     method: 'POST',
     body: formData
   })
